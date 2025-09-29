@@ -1,8 +1,14 @@
-import "./App.css";
-import MyButton from "./components/MyButton";
 import "./misComponentes.css";
+import MyButton from "./components/MyButton";
+import { useState } from "react";
 
 export default function App() {
+  const [count, setCount] = useState(0);
+
+  function addCount() {
+    console.log(count + 1);
+    setCount(count + 1);
+  }
   return (
     <div>
       <MyButton
@@ -10,35 +16,35 @@ export default function App() {
         text="Click me"
         variant="primary"
         size="medium"
-        onClick=""
+        onClick={addCount}
       />
       <MyButton
         disabled={false}
         text="Click me"
         variant="secondary"
         size="small"
-        onClick=""
+        onClick={addCount}
       />
       <MyButton
         text="Don't click me"
         variant="danger"
         size="large"
         disabled={true}
-        onClick=""
+        onClick={addCount}
       />
       <MyButton
         disabled={false}
         text="Click me"
         variant="primary"
         size="large"
-        onClick=""
+        onClick={addCount}
       />
       <MyButton
         disabled={false}
         text="Click me"
         variant="secondary"
         size="medium"
-        onClick=""
+        onClick={addCount}
       />
     </div>
   );
