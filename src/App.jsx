@@ -1,5 +1,5 @@
 import "./misComponentes.css";
-import MyButton from "./components/MyButton";
+import CustomButton from "./components/CustomButton";
 import { useState } from "react";
 
 export default function App() {
@@ -11,35 +11,35 @@ export default function App() {
   }
   return (
     <div>
-      <MyButton
+      <CustomButton
         disabled={false}
         text="Click me"
         variant="primary"
         size="medium"
         onClick={addCount}
       />
-      <MyButton
+      <CustomButton
         disabled={false}
         text="Click me"
         variant="secondary"
         size="small"
         onClick={addCount}
       />
-      <MyButton
+      <CustomButton
         text="Don't click me"
         variant="danger"
         size="large"
         disabled={true}
         onClick={addCount}
       />
-      <MyButton
+      <CustomButton
         disabled={false}
         text="Click me"
         variant="primary"
         size="large"
         onClick={addCount}
       />
-      <MyButton
+      <CustomButton
         disabled={false}
         text="Click me"
         variant="secondary"

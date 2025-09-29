@@ -1,4 +1,4 @@
-export default function MyButton(props) {
+export default function CustomButton(props) {
   return (
     <button
       onClick={!props.disabled ? props.onClick : () => {}}
