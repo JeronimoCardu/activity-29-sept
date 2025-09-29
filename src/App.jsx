@@ -55,6 +55,9 @@ export default function App() {
         onClick=""
       />
     </div>
+  );
+}
+
 import CustomButton from "./components/CustomButton";
 import UserProfile from "./components/UserProfile";
 import Product from "./components/Product";
@@ -170,4 +173,4 @@ export default function App() {
       </div>
     </main>
   );
-};
+}
