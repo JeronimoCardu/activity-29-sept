@@ -1,66 +1,7 @@
-import "./misComponentes.css";
-import "./components/usercards.css";
-
-export default function App() {
-  const users = [
-    { name: 'Rena Altube', email: 'rena.altube@example.com', age: 23, isOnline: true },
-    { name: 'Ian Badino', email: 'ian.badino@example.com', age: 23, isOnline: false },
-    { name: 'Walter Molino', email: 'walter.molino@example.com', age: 23, isOnline: true },
-    { name: 'Jeronimo Cardu', email: 'jeronimo.cardu@example.com', age: 23, isOnline: false },
-  ];
-  return (
-    <div>
-      <div className="component-section">
-        <h2>Propuesta 1: Tarjetas de Usuario</h2>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-          {users.map((user) => (
-            <UserCard key={user.email} {...user} />
-            ))}
-        </div>
-      </div>
-
-      <MyButton
-        disabled={false}
-        text="Click me"
-        variant="primary"
-        size="medium"
-        onClick=""
-      />
-      <MyButton
-        disabled={false}
-        text="Click me"
-        variant="secondary"
-        size="small"
-        onClick=""
-      />
-      <MyButton
-        text="Don't click me"
-        variant="danger"
-        size="large"
-        disabled={true}
-        onClick=""
-      />
-      <MyButton
-        disabled={false}
-        text="Click me"
-        variant="primary"
-        size="large"
-        onClick=""
-      />
-      <MyButton
-        disabled={false}
-        text="Click me"
-        variant="secondary"
-        size="medium"
-        onClick=""
-      />
-    </div>
-  );
-}
-
 import CustomButton from "./components/CustomButton";
 import UserProfile from "./components/UserProfile";
 import Product from "./components/Product";
+import UserCard from "./components/usercards"
 import { useState } from "react";
 
 export default function App() {
@@ -118,6 +59,13 @@ export default function App() {
     },
   ];
 
+  const users = [
+    { name: 'Rena Altube', email: 'rena.altube@example.com', age: 23, isOnline: true },
+    { name: 'Ian Badino', email: 'ian.badino@example.com', age: 23, isOnline: false },
+    { name: 'Walter Molino', email: 'walter.molino@example.com', age: 23, isOnline: true },
+    { name: 'Jeronimo Cardu', email: 'jeronimo.cardu@example.com', age: 23, isOnline: false },
+  ];
+
   return (
     <main>
       <div>
@@ -170,6 +118,12 @@ export default function App() {
       <div>
         <Product name="Silla" price={500} discount={10} category="Mueble" />
         <Product name="Milanesa" price={200} category="Alimento" />
+      </div>
+      <h2>Propuesta 1: Tarjetas de Usuario</h2>
+      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+        {users.map((user) => (
+          <UserCard key={user.email} {...user} />
+        ))}
       </div>
     </main>
   );
