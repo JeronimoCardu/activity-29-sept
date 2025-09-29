@@ -1,5 +1,6 @@
 import "./misComponentes.css";
 import CustomButton from "./components/CustomButton";
+import Product from "./components/Product"
 import { useState } from "react";
 
 export default function App() {
@@ -45,6 +46,17 @@ export default function App() {
         variant="secondary"
         size="medium"
         onClick={addCount}
+      />
+      <Product
+        name="Silla"
+        price={500}
+        discount={10}
+        category="Mueble"
+      />
+      <Product
+        name="Milanesa"
+        price={200}
+        category="Alimento"
       />
     </div>
   );
