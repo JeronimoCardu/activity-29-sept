@@ -1,6 +1,7 @@
 import "./misComponentes.css";
 import CustomButton from "./components/CustomButton";
 import UserProfile from "./components/UserProfile";
+import Product from "./components/Product";
 import { useState } from "react";
 
 export default function App() {
@@ -107,6 +108,10 @@ export default function App() {
           layout={u.layout}
         />
       ))}
+      <div>
+        <Product name="Silla" price={500} discount={10} category="Mueble" />
+        <Product name="Milanesa" price={200} category="Alimento" />
+      </div>
     </main>
   );
 }
